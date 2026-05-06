@@ -1,0 +1,43 @@
+# Dependencies
+/node_modules
+/server/node_modules
+/.pnp
+.pnp.js
+
+# SQLite database files (runtime data — should not be committed)
+/server/data/*.db
+/server/data/*.db-shm
+/server/data/*.db-wal
+/server/data/*.bak
+
+# Claude Code workspace
+.claude
+
+# Testing
+/coverage
+
+# Production
+/build
+/dist
+
+# Misc
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+Thumbs.db

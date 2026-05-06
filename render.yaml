@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: asset-management
+    runtime: node
+    region: oregon
+    plan: starter
+    nodeVersion: 22
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+    disk:
+      name: sqlite-data
+      mountPath: /opt/render/project/src/server/data
+      sizeGB: 1

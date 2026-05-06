@@ -1,0 +1,45 @@
+{
+  "name": "react-asset-management",
+  "version": "1.0.0",
+  "description": "React Asset Management System with login-protected admin panel",
+  "private": true,
+  "proxy": "http://localhost:4000",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.12.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "start:web": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "server": "npm --prefix server start",
+    "server:install": "npm --prefix server install",
+    "postinstall": "npm --prefix server install --omit=dev",
+    "dev": "concurrently -n web,api -c blue,green \"npm run start:web\" \"npm run server\""
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
